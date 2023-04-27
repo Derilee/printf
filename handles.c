@@ -14,14 +14,13 @@ int handles(const char *str, va_list list)
 	{
 		if (str[i] == '%')
 		{
-			aux = percent_handler(str, list, &i);
+			j = conversion_handling(str, list, &i);
 			if (aux == -1)
 				return (-1);
 
 			size += j;
 			continue;
 		}
-
 		_putchar(str[i]);
 		size = size + 1;
 	}
