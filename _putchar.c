@@ -4,7 +4,7 @@
 * @c: The character to print
 * Return: On sucess 1.
 * On error, -1 is returned, and error is set appropriately.
-* 
+*
 * Description - buffer is a temporary storage to hold the character to print
 */
 int _putchar(char c)
