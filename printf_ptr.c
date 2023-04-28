@@ -2,33 +2,32 @@
 #include <stdio.h>
 
 /**
- * printf_ptr - Print a number in hexadecimal format
- * @list: Number to print
- *
+ * printf_ptr - function to Print a number in hexadecimal format
+ * @list: numbers to print
  * Return: Length of the number
  **/
 int printf_ptr(va_list list)
 {
-	char *p_buff;
-	int size;
+	char *ptr;
+	int i;
 
-	p_buff = int_ascii(va_arg(list, unsigned long int), 16);
-
-	if (!_strcmp(p_buff, "0"))
+	ptr = int_ascii(va_arg(list, unsigned long int), 16);
+	if (!_strcmp(ptr, "0"))
+	{
 		return (print("(nil)"));
+	}
+	i = print("0x");
 
-	size = print("0x");
-
-	if (!_strcmp(p_buff, "-1"))
-		size += print("ffffffffffffffff");
+	if (!_strcmp(ptr, "-1"))
+		i += print("ffffffffffffffff");
 	else
-		size += print(p_buff);
+		i += print(ptr);
 
-	return (size);
+	return (i);
 }
 
 /**
- * _strcmp - Compare two strings
+ * _strcmp - function to compare two strings
  * @s1: String 1
  * @s2: String 2
  * Return: Integer
