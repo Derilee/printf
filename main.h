@@ -26,6 +26,15 @@ int printf_char(va_list list);
 /** print string */
 int printf_str(va_list list);
 
+/** print integers */
+int printf_int(va_list);
+
+/** print binary */
+int printf_binary(va_list);
+
+/** print octal values */
+int printf_octal(va_list);
+
 /**
  * struct _format - struct
  * @type: format of
