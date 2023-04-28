@@ -8,8 +8,9 @@
 /** main prototype */
 int _printf(const char *format, ...);
 
-/** putchar */
+/** putchar and buffer */
 int _putchar(char c);
+int _buffer(char c);
 
 /** handles the format specifies */
 int handles(const char *str, va_list list);
@@ -18,6 +19,7 @@ int conversion_handling(const char *str, va_list list, int *i);
 /** print tools */
 int _strlen(const char *str);
 int print(char *str);
+
 
 /** print character */
 int printf_char(va_list list);
@@ -58,6 +60,4 @@ typedef struct _format
 	char type;
 	int (*f)(va_list);
 } format;
-
-
 #endif
