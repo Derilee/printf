@@ -25,4 +25,15 @@ int printf_char(va_list list);
 
 /** print string */
 int printf_string(va_list list);
+
+/**
+ * struct _format - struct
+ * @type: format of
+ * @f: the function
+ */
+typedef struct _format
+{
+	char type;
+	int (*f)(va_list);
+} format;
 #endif
