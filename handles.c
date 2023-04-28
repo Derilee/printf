@@ -41,7 +41,7 @@ int conversion_handling(const char *str, va_list list, int *i)
 		{'s', printf_str}, {'c', printf_char}, {'d', printf_int},
 		{'i', printf_int}, {'b', printf_binary}, {'u', printf_unsigned},
 		{'o', printf_octal}, {'x', printf_hexdec_low},
-		{'X', printf_hexdec_up}, {'p', printf_ptr},
+		{'X', printf_hexdec_high}, {'p', printf_ptr},
 		{'r', printf_rev_str}, {'R', printf_rot}
 	};
 
