@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * printf_string - function to Print a string
+ * printf_str - function to Print a string
  * @list: list.
  * Return: length of the string
  */
-int printf_string(va_list list)
+int printf_str(va_list list)
 {
 	char *p;
 	int len;

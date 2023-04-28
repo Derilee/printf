@@ -24,7 +24,7 @@ int print(char *str);
 int printf_char(va_list list);
 
 /** print string */
-int printf_string(va_list list);
+int printf_str(va_list list);
 
 /**
  * struct _format - struct

@@ -15,7 +15,7 @@ int handles(const char *str, va_list list)
 		if (str[i] == '%')
 		{
 			j = conversion_handling(str, list, &i);
-			if (aux == -1)
+			if (j == -1)
 				return (-1);
 
 			size += j;
@@ -38,11 +38,11 @@ int conversion_handling(const char *str, va_list list, int *i)
 {
 	int size, j, num_char;
 	format formats[] = {
-		{'s', print_string}, {'c', print_char}, {'d', print_integer},
-		{'i', print_integer}, {'b', print_binary}, {'u', print_unsigned},
-		{'o', print_octal}, {'x', print_hexadecimal_low},
-		{'X', print_hexadecimal_upp}, {'p', print_pointer},
-		{'r', print_rev_string}, {'R', print_rot}
+		{'s', printf_str}, {'c', printf_char}, {'d', printf_int},
+		{'i', printf_int}, {'b', printf_binary}, {'u', printf_unsigned},
+		{'o', printf_octal}, {'x', printf_hexdec_low},
+		{'X', printf_hexdec_up}, {'p', printf_ptr},
+		{'r', printf_rev_str}, {'R', printf_rot}
 	};
 
 	*i = *i + 1;

@@ -23,9 +23,10 @@ int _buffer(char c)
 	static int i;
 
 	if (c == -1 || i == 1024)
+	{
 		write(1, tmpstorage, i);
 		i = 0;
-
+	}
 	if (c != -1)
 		tmpstorage[i++] = c;
 	return (1);
