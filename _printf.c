@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		return (0);
 
 	va_start(arr, format);
-	size = handles(format, arr);
+	size = format_controller(format, arr);
 
 	_putchar(-1);
 	va_end(arr);

@@ -1,27 +1,27 @@
 #include "main.h"
 /**
- * handles - function that act as a Format controller
- * @str: String format
+ * format_controller - function that act as a Format controller
+ * @ch: String format
  * @list: List of arguments
  * Return: Total size of arguments with the total size of the base string
  **/
-int handles(const char *str, va_list list)
+int format_controller(const char *ch, va_list list)
 {
 	int size, i, j;
 
 	size = 0;
-	for (i = 0; str[i] != 0; i++)
+	for (i = 0; ch[i] != 0; i++)
 	{
-		if (str[i] == '%')
+		if (ch[i] == '%')
 		{
-			j = conversion_handling(str, list, &i);
+			j = conversion_handling(ch, list, &i);
 			if (j == -1)
 				return (-1);
 
 			size += j;
 			continue;
 		}
-		_putchar(str[i]);
+		_putchar(ch[i]);
 		size = size + 1;
 	}
 	return (size);
@@ -29,12 +29,12 @@ int handles(const char *str, va_list list)
 
 /**
  * conversion_handling - function that handles conversion specifiers
- * @str: String format
+ * @ch: character/string format
  * @list: List of arguments
  * @i: Iterates through the specifiers
  * Return: Size of the numbers of elements printed
  **/
-int conversion_handling(const char *str, va_list list, int *i)
+int conversion_handling(const char *ch, va_list list, int *i)
 {
 	int size, j, num_char;
 	format formats[] = {
@@ -47,10 +47,11 @@ int conversion_handling(const char *str, va_list list, int *i)
 
 	*i = *i + 1;
 
-	if (str[*i] == '\0')
+	if (ch[*i] == '\0')
+	{
 		return (-1);
-
-	if (str[*i] == '%')
+	}
+	if (ch[*i] == '%')
 	{
 		_putchar('%');
 		return (1);
@@ -59,13 +60,13 @@ int conversion_handling(const char *str, va_list list, int *i)
 	num_char = sizeof(formats) / sizeof(formats[0]);
 	for (size = j = 0; j < num_char; j++)
 	{
-		if (str[*i] == formats[j].type)
+		if (ch[*i] == formats[j].type)
 		{
 			size = formats[j].f(list);
 			return (size);
 		}
 	}
 
-	_putchar('%'), _putchar(str[*i]);
+	_putchar('%'), _putchar(ch[*i]);
 	return (2);
 }

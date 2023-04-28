@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 /** main prototype */
 int _printf(const char *format, ...);
@@ -12,8 +13,8 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 
 /** handles the format specifies */
-int handles(const char *str, va_list list);
-int conversion_handling(const char *str, va_list list, int *i);
+int format_controller(const char *ch, va_list list);
+int conversion_handling(const char *ch, va_list list, int *i);
 
 /** print tools */
 int _strlen(const char *str);
@@ -25,6 +26,7 @@ int printf_char(va_list list);
 /** print string */
 int printf_str(va_list list);
 int printf_rev_str(va_list);
+int _strcmp(char *s1, char *s2);
 
 /** print integers */
 int printf_int(va_list);
@@ -48,9 +50,12 @@ int printf_ptr(va_list);
 /** print rot */
 int printf_rot(va_list);
 
+/** convert an int to ascii character */
+char *int_ascii(long int num, int b);
+
 /**
- * struct _format - struct
- * @type: format of
+ * struct _format - struct datatype
+ * @type: format of the struct data type
  * @f: the function
  */
 typedef struct _format
