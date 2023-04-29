@@ -10,8 +10,8 @@
 int _printf(const char *format, ...);
 
 /** putchar */
-int _putchar(char c);
-int _buffer(char c);
+int _putchar(char);
+int _buffer(char);
 
 /** handles the format specifies */
 int format_controller(const char *ch, va_list list);
