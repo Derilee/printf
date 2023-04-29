@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_hexadecimal_upp - Print a number in hexadecimal format
+ * printf_hexdec_high - Print a number in hexadecimal format
  * @list: Number to print
  *
  * Return: Length of the number
@@ -26,8 +26,7 @@ int printf_hexdec_high(va_list list)
  */
 int _isalpha(int c)
 {
-
-        return (c >= 'A' && c <= 'Z');
+	return (c >= 'A' && c <= 'Z');
 }
 
 /**
@@ -39,8 +38,7 @@ int _isalpha(int c)
  */
 int _islower(int c)
 {
-
-        return (c >= 'a' && c <= 'z');
+	return (c >= 'a' && c <= 'z');
 }
 
 /**
@@ -50,15 +48,14 @@ int _islower(int c)
  **/
 char *to_alpha(char *c)
 {
-        int i;
+	int i;
 
-        for (i = 0; c[i] != '\0'; i++)
-        {
-                if (is_lower(c[i]))
-                {
-                        c[i] = c[i] - 32;
-                }
-        }
-
-        return (c);
+	for (i = 0; c[i] != '\0'; i++)
+	{
+		if (is_lower(c[i]))
+		{
+			c[i] = c[i] - 32;
+		}
+	}
+	return (c);
 }
