@@ -20,16 +20,6 @@ int printf_hexdec_high(va_list list)
 }
 
 /**
- * _isalpha - Check for uppper and lower case
- * @c:  The variable used for int
- * Return: Always (0) success
- */
-int _isalpha(int c)
-{
-	return (c >= 'A' && c <= 'Z');
-}
-
-/**
  * _islower - Entry point
  *
  * @c: The variable
