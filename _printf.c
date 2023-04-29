@@ -8,20 +8,20 @@
  **/
 int _printf(const char *format, ...)
 {
-	int size;
+	int i;
 	va_list arr;
 
 	if (format == NULL)
 		return (-1);
 
-	size = _strlen(format);
-	if (size <= 0)
+	i = _strlen(format);
+	if (i <= 0)
 		return (0);
 
 	va_start(arr, format);
-	size = format_controller(format, arr);
+	i = format_controller(format, arr);
 
 	_putchar(-1);
 	va_end(arr);
-	return (size);
+	return (i);
 }

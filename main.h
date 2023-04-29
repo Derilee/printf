@@ -28,6 +28,9 @@ int printf_char(va_list list);
 int printf_str(va_list list);
 int printf_rev_str(va_list);
 int _strcmp(char *s1, char *s2);
+int is_lower(char c);
+int is_alpha(char c);
+char *to_alpha(char *c);
 
 /** print integers */
 int printf_int(va_list);

@@ -7,9 +7,9 @@
  **/
 int format_controller(const char *ch, va_list list)
 {
-	int size, i, j;
+	int total, i, j;
 
-	size = 0;
+	total = 0;
 	for (i = 0; ch[i] != 0; i++)
 	{
 		if (ch[i] == '%')
@@ -18,13 +18,13 @@ int format_controller(const char *ch, va_list list)
 			if (j == -1)
 				return (-1);
 
-			size += j;
+			total += j;
 			continue;
 		}
 		_putchar(ch[i]);
-		size = size + 1;
+		total = total + 1;
 	}
-	return (size);
+	return (total);
 }
 
 /**
