@@ -10,25 +10,26 @@
 */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+/*	return (write(1, &c, 1)); */
+	return (_buffer(c));
 }
 
 /**
  * _buffer - stores the character to print
  * @c: The character to print
  * Return: on success 1
- *
-int _buffer(char )
+ */
+int _buffer(char c)
 {
 	static char tmpstorage[1024];
 	static int i;
 
-	if (c == -1 || i == 1024)
+	if (c == 1 || i == 1024)
 	{
 		write(1, tmpstorage, i);
 		i = 0;
 	}
-	if (c != -1)
+	if (c != 1)
 		tmpstorage[i++] = c;
 	return (1);
-} */
+}

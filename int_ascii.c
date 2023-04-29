@@ -22,12 +22,10 @@ char *int_ascii(long int num, int b)
 	ptr = &count[49];
 	*ptr = '\0';
 
-	do
-	{
+	do {
 		*--ptr = arr[i % b];
 		i /= b;
-	}
-	while (i != 0);
+	} while (i != 0);
 
 	if (ascii)
 	{

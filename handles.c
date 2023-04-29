@@ -38,11 +38,14 @@ int conversion_handling(const char *ch, va_list list, int *i)
 {
 	int size, j, num_char;
 	format formats[] = {
-		{'s', printf_str}, {'c', printf_char}, /** {'d', printf_int},
+		{'s', printf_str}, {'c', printf_char}
+		/**
+		 * {'d', printf_int},
 		{'i', printf_int}, {'b', printf_binary}, {'u', printf_unsigned},
 		{'o', printf_octal}, {'x', printf_hexdec_low},
 		{'X', printf_hexdec_high}, {'p', printf_ptr},
-		{'r', printf_rev_str}, {'R', printf_rot} */
+		{'r', printf_rev_str}, {'R', printf_rot}
+		*/
 	};
 
 	*i = *i + 1;
