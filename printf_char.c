@@ -21,19 +21,7 @@ int printf_char(va_list list)
 int _isalpha(int c)
 {
 
-	if (c >= 'A' && c <= 'Z')
-	{
-		return (1);
-	}
-		if (c >= 'a' && c <= 'z')
-		{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
 
 /**
@@ -46,19 +34,12 @@ int _isalpha(int c)
 int _islower(int c)
 {
 
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-		else
-		{
-			return (0);
-		}
+	return (c >= 'a' && c <= 'z');
 }
 
 /**
- * to_alpha - Change the string to uppercase
- * @s: String
+ * *to_alpha - Change the string to uppercase
+ * @c: String
  * Return: String uppercase
  **/
 char *to_alpha(char *c)
