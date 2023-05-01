@@ -10,7 +10,7 @@
 */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	return (_buffer(c));
 }
 
 /**
@@ -25,7 +25,7 @@ int _buffer(char c)
 
 	if (c == 1 || i == 1024)
 	{
-		write(1, tmpstorage, i);
+		write(1, &tmpstorage, 1);
 		i = 0;
 	}
 	if (c != 1)
