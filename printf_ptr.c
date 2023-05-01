@@ -11,7 +11,7 @@ int printf_ptr(va_list list)
 	char *ptr;
 	int i;
 
-	ptr = int_ascii(va_arg(list, unsigned long int), 16);
+	ptr = itoa(va_arg(list, unsigned long int), 16);
 	if (!_strcmp(ptr, "0"))
 	{
 		return (print("(nil)"));

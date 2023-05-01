@@ -6,7 +6,7 @@
  * @b: base variable
  * Return: pointer to the ascii character
  */
-char *int_ascii(long int num, int b)
+char *itoa(long int num, int b)
 {
 	static char *arr = "0123456789abcdef";
 	static char count[50];

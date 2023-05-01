@@ -55,7 +55,7 @@ int printf_ptr(va_list);
 int printf_rot(va_list);
 
 /** convert an int to ascii character */
-char *int_ascii(long int num, int b);
+char *itoa(long int num, int b);
 
 /**
  * struct _format - struct datatype
