@@ -13,18 +13,18 @@ int _putchar(char);
 int _buffer(char);
 
 /** handles the format specifies */
-int format_controller(const char *ch, va_list list);
-int conversion_handling(const char *ch, va_list list, int *i);
+int format_controller(const char *, va_list);
+int conversion_handling(const char *, va_list, int *i);
 
 /** print tools */
 int _strlen(const char *);
 int print(char *);
 
 /** print character */
-int printf_char(va_list list);
+int printf_char(va_list);
 
 /** print string */
-int printf_str(va_list list);
+int printf_str(va_list);
 int printf_rev_str(va_list);
 int _strcmp(char *s1, char *s2);
 int is_lower(char c);
