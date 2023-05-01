@@ -18,8 +18,8 @@ int format_controller(const char *ch, va_list list);
 int conversion_handling(const char *ch, va_list list, int *i);
 
 /** print tools */
-int _strlen(const char *str);
-int print(char *str);
+int _strlen(const char *);
+int print(char *);
 
 /** print character */
 int printf_char(va_list list);
@@ -55,7 +55,7 @@ int printf_ptr(va_list);
 int printf_rot(va_list);
 
 /** convert an int to ascii character */
-char *itoa(long int num, int b);
+char *itoa(long int, int);
 
 /**
  * struct _format - struct datatype
